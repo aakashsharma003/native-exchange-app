@@ -1,27 +1,56 @@
 {
   "expo": {
-    "name": "myproject",
+    "name": "pursaExchange",
     "slug": "myproject",
     "version": "1.0.0",
+    "scheme": "pursaExchange",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/adaptive-icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#002046"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pursaexchange.project"
     },
     "android": {
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "whatsapp",
+              "host": "send"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ],
+      "permissions": [
+        "READ_CONTACTS",
+        "READ_PHONE_STATE",
+        "CALL_PHONE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/android/playstore-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.pursaexchange.project"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/android/ic_launcher-web.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "faca86fe-ce49-4fdc-b4c5-2befd935ad95"
+      }
     }
   }
 }
